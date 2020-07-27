@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,29 +10,26 @@
   <header class="page-header">
     <a class="page-header__logo"><img src="img/logotype-mobile.svg" width="102px" height="84px"
         alt="City of Sedona"></a>
-    <nav class="main-nav page-header__main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
 
-      <div class="main-nav__wrapper main-nav__wrapper--hidden">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма Отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-
+        <nav class="main-nav page-header__main-nav">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a>Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="photo.html">Фото и видео</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Форма Отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
+
+    <button class="main-nav-toggle" type="button" aria-label="Открыть меню"></button>
+
   </header>
 
   <main class="main">
@@ -148,13 +145,13 @@
   <footer class="footer">
     <p class="footer__slogan">#VisitSedona</p>
     <ul class="social-links-list footer__social-links-list">
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--twitter">
         <a href="twitter.com">Twitter</a>
       </li>
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--facebook">
         <a href="facebook.com">Facebook</a>
       </li>
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--youtube">
         <a href="youtube.com">Youtube</a>
       </li>
     </ul>

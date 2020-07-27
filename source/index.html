@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,29 +10,26 @@
   <header class="page-header">
     <a class="page-header__logo"><img src="img/logotype-mobile.svg" width="102px" height="84px"
         alt="City of Sedona"></a>
+
     <nav class="main-nav page-header__main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-
-      <div class="main-nav__wrapper main-nav__wrapper--hidden">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма Отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a>Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="photo.html">Фото и видео</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Форма Отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
+
+    <button class="main-nav-toggle" type="button" aria-label="Открыть меню"></button>
+
   </header>
 
   <main class="main">
@@ -41,56 +38,51 @@
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
     </section>
 
-    <section class="features main_features">
+    <section class="features">
       <div class="main-heading features__main-heading">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="main-heading__subheading">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
 
-      <div class="main-feature features__main-feature main-feature--feature-1">
-        <h3>Настоящий городок</h3>
-        <span>— №1 —</span>
-        <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-      </div>
-
-      <ul class="featurelist-with-icons features__featurelist-with-icons">
-        <li class="feature-with-icon icon-house featurelist-with-icons__item">
+      <ul class="features-list features__features-list">
+        <li class="features-list__item features-list__item--1st-item">
+          <h3>Настоящий городок</h3>
+          <span>— №1 —</span>
+          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        </li>
+        <li class="features-list__item features-list__item--2nd-item">
+          <h3>Там есть мост дьявола</h3>
+            <span>— №2 —</span>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </li>
+        <li class="features-list__item">
+          <h3>Небольшая площадь</h3>
+          <span>— №3 —</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </li>
+        <li class="features-list__item">
+          <h3>Красивая дорога</h3>
+          <span>— №4 —</span>
+          <p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
+        </li>
+        <li class="features-list__item">
+          <h3>Мало туристов</h3>
+          <span>— №5 —</span>
+          <p>Большинство едет в гранд каньон и толпится там</p>
+        <li class="features-list__item features-list__item--icon icon-house">
           <h3>Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li class="feature-with-icon icon-gift featurelist-with-icons__item">
+        <li class="features-list__item features-list__item--icon icon-gift">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
-        <li class="feature-with-icon icon-burger featurelist-with-icons__item">
+        <li class="features-list__item features-list__item--icon icon-burger">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
       </ul>
 
-      <div class="main-feature features__main-feature main-feature--feature-2">
-        <h3>Там есть мост дьявола</h3>
-        <span>— №2 —</span>
-        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-      </div>
-
-      <ul class="featurelist-no-icons features__featurelist-no-icons">
-        <li class="featurelist-no-icons__item">
-          <h3>Небольшая площадь</h3>
-          <span>— №3 —</span>
-          <p>Все достопримечательности находятся очень близко</p>
-        </li>
-        <li class="featurelist-no-icons__item">
-          <h3>Красивая дорога</h3>
-          <span>— №4 —</span>
-          <p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
-        </li>
-        <li class="featurelist-no-icons__item">
-          <h3>Мало туристов</h3>
-          <span>— №5 —</span>
-          <p>Большинство едет в гранд каньон и толпится там</p>
-        </li>
-      </ul>
     </section>
 
     <section class="hotel-search main__hotel-search">
@@ -102,13 +94,13 @@
   <footer class="footer">
     <p class="footer__slogan">#VisitSedona</p>
     <ul class="social-links-list footer__social-links-list">
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--twitter">
         <a href="twitter.com">Twitter</a>
       </li>
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--facebook">
         <a href="facebook.com">Facebook</a>
       </li>
-      <li class="social-links-list__item">
+      <li class="social-links-list__item social-links-list__item--youtube">
         <a href="youtube.com">Youtube</a>
       </li>
     </ul>
