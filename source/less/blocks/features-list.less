@@ -8,24 +8,26 @@
   padding: 0;
 }
 
-.features-list__item:nth-child(2) {
-  order: 1;
-}
+.features-list__item {
+  &:nth-child(2) {
+    order: 1;
+  }
 
-.features-list__item:nth-child(6) {
-  order: 2;
-}
+  &:nth-child(6) {
+    order: 2;
+  }
 
-.features-list__item:nth-child(3) {
-  order: 3;
-}
+  &:nth-child(3) {
+    order: 3;
+  }
 
-.features-list__item:nth-child(4) {
-  order: 4;
-}
+  &:nth-child(4) {
+    order: 4;
+  }
 
-.features-list__item:nth-child(5) {
-  order: 5;
+  &:nth-child(5) {
+    order: 5;
+  }
 }
 
 .features-list__item:nth-child(3),
@@ -61,7 +63,6 @@
   }
 
   @media (min-width: @tablet-width) {
-
     &::after,
     &::before {
       height: 256px;
@@ -102,17 +103,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/main-city-mobile@1x.jpg);
+  background-image: url("../img/main-city-mobile@1x.jpg");
 
   @media (min-width: @tablet-width) {
     width: calc(100% - 256px);
-    background-image: url(../img/main-city-tablet@1x.jpg);
+    background-image: url("../img/main-city-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url(../img/main-city-desktop@1x.jpg);
+    background-image: url("../img/main-city-desktop@1x.jpg");
   }
-
 }
 
 @media (min-width: @tablet-width) {
@@ -122,10 +122,10 @@
     background-position: center;
     background-size: cover;
     width: calc(100% - 256px);
-    background-image: url(../img/photo-bridge-tablet@1x.jpg);
+    background-image: url("../img/photo-bridge-tablet@1x.jpg");
 
     @media (min-width: @desktop-width) {
-      background-image: url(../img/photo-bridge-desktop@1x.jpg);
+      background-image: url("../img/photo-bridge-desktop@1x.jpg");
     }
   }
 }
@@ -137,6 +137,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../img/photo-bridge-mobile@1x.jpg);
+    background-image: url("../img/photo-bridge-mobile@1x.jpg");
   }
 }
