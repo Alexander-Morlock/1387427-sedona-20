@@ -1,0 +1,31 @@
+.main-nav-mobile-hide {
+  display: none;
+}
+
+.main-nav-toggle {
+  width: 23px;
+  height: 22px;
+  background-image: url("../img/icon-menu.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 3;
+  top: 17px;
+  right: 20px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav-toggle--cross {
+  background-image: url("../img/icon-cross.svg");
+}
+
+.main-nav--show {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}

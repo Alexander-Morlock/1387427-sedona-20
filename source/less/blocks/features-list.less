@@ -1,0 +1,142 @@
+.features-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list__item {
+  &:nth-child(2) {
+    order: 1;
+  }
+
+  &:nth-child(6) {
+    order: 2;
+  }
+
+  &:nth-child(3) {
+    order: 3;
+  }
+
+  &:nth-child(4) {
+    order: 4;
+  }
+
+  &:nth-child(5) {
+    order: 5;
+  }
+}
+
+.features-list__item:nth-child(3),
+.features-list__item:nth-child(4),
+.features-list__item:nth-child(5) {
+  @media (min-width: @tablet-width) {
+    width: 256px;
+
+    div {
+      width: 190px;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: @tablet-width - 1) {
+    width: 100%;
+    padding: 0 @page-mobile-padding;
+  }
+}
+
+.features-list__item--1st-item,
+.features-list__item--2nd-item {
+  background-color: @color-blue;
+  color: @color-white;
+  width: 100%;
+  height: 471px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &::after,
+  &::before {
+    height: 260px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after,
+    &::before {
+      height: 256px;
+    }
+  }
+
+  div {
+    width: 290px;
+    margin: 34px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+
+    h3 {
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 26px;
+    }
+
+    p,
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    div {
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+.features-list__item--1st-item::after {
+  content: "";
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/main-city-mobile@1x.jpg");
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% - 256px);
+    background-image: url("../img/main-city-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/main-city-desktop@1x.jpg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features-list__item--2nd-item::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: calc(100% - 256px);
+    background-image: url("../img/photo-bridge-tablet@1x.jpg");
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/photo-bridge-desktop@1x.jpg");
+    }
+  }
+}
+
+@media (max-width: @tablet-width - 1) {
+  .features-list__item--2nd-item::after {
+    content: "";
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/photo-bridge-mobile@1x.jpg");
+  }
+}

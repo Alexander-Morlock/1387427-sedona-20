@@ -1,0 +1,43 @@
+.social-links-list {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  display: flex;
+}
+
+.social-links-list__item {
+  width: 46px;
+  height: 48px;
+  background-color: @color-blue;
+  display: flex;
+
+  &:hover {
+    background-color: @color-blue-hover;
+  }
+
+  &:active {
+    background-color: @color-blue-active;
+  }
+
+  &:disabled {
+    background-color: @color-buttone-disabled;
+  }
+
+  &:nth-child(2) {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  a {
+    margin: auto;
+  }
+
+  svg {
+    fill: @color-white;
+    margin-top: 5px;
+
+    &:active {
+      opacity: @color-opacity-active;
+    }
+  }
+}

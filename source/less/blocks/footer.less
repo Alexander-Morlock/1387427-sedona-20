@@ -1,0 +1,47 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    height: 120px;
+  }
+}
+
+.footer__slogan {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 105px;
+  }
+}
+
+.footer__developed-by {
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media (max-width: @tablet-width - 1) {
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 120px;
+  }
+}
