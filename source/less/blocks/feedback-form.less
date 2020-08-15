@@ -1,0 +1,61 @@
+.feedback-form {
+  legend {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    legend {
+      font-size: 21px;
+      line-height: 26px;
+    }
+
+    .feedback__impressions {
+      order: 1;
+      width: 43%;
+
+      li {
+        margin-bottom: 60px;
+      }
+    }
+
+    .feedback__form-name {
+      order: 2;
+      width: 43%;
+
+      legend {
+        margin-left: 0;
+      }
+    }
+
+    .feedback__form-contacts {
+      order: 3;
+      width: 100%;
+    }
+
+    .visited-places {
+      order: 4;
+    }
+
+    .describe-emotions {
+      order: 5;
+    }
+
+    .submit-and-text {
+      order: 6;
+    }
+
+    .feedback__divider {
+      order: 2;
+    }
+  }
+}

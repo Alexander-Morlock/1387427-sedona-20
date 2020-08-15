@@ -7,6 +7,16 @@
   align-items: center;
   height: 330px;
 
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+    }
+  }
+
   @media (max-width: @tablet-width) {
     display: block;
     text-align: left;
@@ -28,8 +38,6 @@
     content: "";
     position: absolute;
     top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -62,23 +70,3 @@
     background-image: url("../img/icon-burger.svg");
   }
 }
-
-// @media (max-width: @tablet-width) {
-//   .features-with-icons {
-//     display: block;
-//     text-align: left;
-//     height: auto;
-//   }
-
-//   .features-with-icons__item {
-//     padding-left: 70px;
-//     padding-right: 20px;
-
-//     h3::before {
-//       left: 20px;
-//       top: -10px;
-//       width: 40px;
-//       height: 37px;
-//     }
-//   }
-// }

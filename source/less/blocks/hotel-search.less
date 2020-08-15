@@ -28,7 +28,22 @@
 }
 
 .hotel-search__live-map {
-  margin-top: 49px;
-  width: 100%;
+  display: block;
+  width: auto;
   height: 350px;
+  margin-top: 49px;
+  margin-bottom: 30px;
+
+  margin-left: -1 * @page-mobile-padding;
+  margin-right: -1 * @page-mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -1 * @page-tablet-padding;
+    margin-right: -1 * @page-tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -1 * @page-tablet-padding;
+    margin-right: -1 * @page-tablet-padding;
+  }
 }
