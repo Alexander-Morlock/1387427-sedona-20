@@ -1,12 +1,10 @@
 .visited-places {
-  @media (min-width: @tablet-width) {
-    width: 510px;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  width: 100%;
 
+  @media (min-width: @tablet-width) {
     legend {
-      position: relative;
-      width: 100%;
+      width: 510px;
       text-align: center;
 
       &::before,
@@ -15,17 +13,17 @@
         display: block;
         position: absolute;
         height: 1px;
-        width: 67%;
-        top: 22px;
+        width: 23%;
+        top: -32px;
         background-color: @color-list-divide;
       }
 
       &::before {
-        left: -217px;
+        left: 0;
       }
 
       &::after {
-        right: -217px;
+        right: 0;
       }
     }
   }
@@ -49,10 +47,15 @@
     padding: 0;
 
     @media (min-width: @tablet-width) {
+      width: 510px;
       margin-left: auto;
       margin-right: auto;
       display: flex;
       flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
     }
   }
 
