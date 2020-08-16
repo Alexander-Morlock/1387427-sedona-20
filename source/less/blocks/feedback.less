@@ -27,12 +27,21 @@
 }
 
 .feedback__divider {
-  width: 1px;
-  height: 292px;
-  background-color: @color-list-divide;
+  position: relative;
 
-  @media (max-width: @tablet-width - 1) {
-    display: none;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -60px;
+    width: 1px;
+    height: 292px;
+    background-color: @color-list-divide;
+
+    @media (max-width: @tablet-width - 1) {
+      display: none;
+    }
   }
 }
 
