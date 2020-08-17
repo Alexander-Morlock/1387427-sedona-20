@@ -1,4 +1,18 @@
 .feedback-form {
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 292px;
+    background-color: @color-list-divide;
+    order: 1;
+    margin-right: 20px;
+
+    @media (max-width: @tablet-width - 1) {
+      display: none;
+    }
+  }
+
   legend {
     font-weight: bold;
     font-size: 18px;
