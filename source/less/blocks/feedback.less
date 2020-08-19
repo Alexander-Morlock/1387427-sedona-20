@@ -1,3 +1,43 @@
 .feedback {
-  background-color: transparent;
+  fieldset {
+    border: 0;
+    padding: 0;
+  }
+
+  legend {
+    top: 20px;
+
+    @media (max-width: @tablet-width - 1) {
+      position: relative;
+      margin-bottom: 30px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 290px;
+        background-color: @color-buttone-disabled;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.feedback__icon {
+  width: 58px;
+  height: 58px;
+  background-color: @color-icon-bg;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__icon--phone {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.feedback__icon--mail {
+  background-image: url("../img/icon-mail.svg");
 }

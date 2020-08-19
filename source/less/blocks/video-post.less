@@ -1,3 +1,23 @@
 .video-post {
-  background-color: transparent;
+  text-align: center;
+
+  p {
+    width: 266px;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      width: 445px;
+    }
+  }
+
+  h2 {
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 26px;
+    }
+  }
+}
+
+.video-post__videoplayer {
+  margin-bottom: 70px;
 }

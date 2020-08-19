@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -24,7 +23,7 @@
             <a href="form.html">Форма Отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -41,16 +40,15 @@
       </section>
 
       <section class="feedback main__feedback">
-        <div class="main-heading feedback__main-heading">
+        <div class="main-heading main-heading--form feedback__main-heading">
           <h2>Оставьте свой отзыв</h2>
           <p class="main-heading__subheading">
             Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </div>
 
-        <form action="https://echo.htmlacademy.ru/" method="post" class="feedback__form">
-
-          <fieldset class="form-name feedback__form-name">
+        <form action="https://echo.htmlacademy.ru/" method="post" class="feedback-form feedback__feedback-form">
+          <fieldset class="feedback__form-name">
             <legend>Представьтесь</legend>
 
             <ul class="feedback-list">
@@ -74,15 +72,17 @@
           <fieldset class="form-contacts feedback__form-contacts">
             <legend>Контактная информация:</legend>
 
-            <ul class="feedback-list">
-              <li class="feedback-list__item">
+            <ul class="feedback-list feedback-list--contacts">
+              <li class="feedback-list__item feedback-list__item--contacts">
                 <label for="input-tel">Контактный телефон*:</label>
                 <input type="tel" placeholder="Введите телефон" id="input-tel" required>
+                <div class="feedback__icon feedback__icon--phone"></div>
               </li>
 
-              <li class="feedback-list__item">
+              <li class="feedback-list__item feedback-list__item--contacts">
                 <label for="input-email">Электронная почта*:</label>
                 <input type="email" placeholder="Введите e-mail" id="input-email" required>
+                <div class="feedback__icon feedback__icon--mail"></div>
               </li>
             </ul>
           </fieldset>
@@ -90,22 +90,22 @@
           <fieldset class="impressions feedback__impressions">
             <legend>Ваше общее впечатление:</legend>
 
-            <ul class="feedback-list">
-              <li class="feedback-list__item">
-                <input type="radio" name="radio-impression" id="rado-impression-1-positive"
-                  value="Скорее положительное">
+            <ul>
+              <li>
+                <input class="impressions__radio-input" type="radio" name="radio-impression"
+                  id="rado-impression-1-positive" value="Скорее положительное" checked>
                 <label for="rado-impression-1-positive">Скорее положительное</label>
               </li>
 
-              <li class="feedback-list__item">
-                <input type="radio" name="radio-impression" id="rado-impression-2-negative"
-                  value="Скорее отрицательное">
+              <li>
+                <input class="impressions__radio-input" type="radio" name="radio-impression"
+                  id="rado-impression-2-negative" value="Скорее отрицательное">
                 <label for="rado-impression-2-negative">Скорее отрицательное</label>
               </li>
 
-              <li class="feedback-list__item">
-                <input type="radio" name="radio-impression" id="rado-impression-3-difficult"
-                  value="Затрудняюсь ответить">
+              <li>
+                <input class="impressions__radio-input" type="radio" name="radio-impression"
+                  id="rado-impression-3-difficult" value="Затрудняюсь ответить">
                 <label for="rado-impression-3-difficult">Затрудняюсь ответить</label>
               </li>
             </ul>
@@ -114,24 +114,27 @@
           <fieldset class="visited-places feedback__visited-places">
             <legend>Посещенные достопримечательности:</legend>
 
-            <ul class="feedback-list">
-              <li class="feedback-list__item">
-                <input type="checkbox" id="visited-bridge" name="visited-bridge" checked>
+            <ul>
+              <li>
+                <input class="visited-places__check-input" type="checkbox" id="visited-bridge" name="visited-bridge"
+                  checked>
                 <label for="visited-bridge">Мост Дьявола</label>
               </li>
 
-              <li class="feedback-list__item">
-                <input type="checkbox" id="visited-mountain" name="visited-mountain" checked>
+              <li>
+                <input class="visited-places__check-input" type="checkbox" id="visited-mountain" name="visited-mountain"
+                  checked>
                 <label for="visited-mountain">Гора-Колокол</label>
               </li>
 
-              <li class="feedback-list__item">
-                <input type="checkbox" id="visited-park" name="visited-park" checked>
+              <li>
+                <input class="visited-places__check-input" type="checkbox" id="visited-park" name="visited-park"
+                  checked>
                 <label for="visited-park">Слайд-парк</label>
               </li>
 
-              <li class="feedback-list__item">
-                <input type="checkbox" id="visited-rocks" name="visited-rocks">
+              <li>
+                <input class="visited-places__check-input" type="checkbox" id="visited-rocks" name="visited-rocks">
                 <label for="visited-rocks">Красные скалы</label>
               </li>
             </ul>
@@ -142,7 +145,10 @@
             <textarea class="describe-emotions__textarea">Опишите подробно все свои восторги
           </textarea>
           </fieldset>
-          <input type="submit" value="Отправить отзыв" class="feedback__submit">
+          <div class="submit-and-text">
+            <button class="button submit-and-text__button-submit" type="submit">Отправить отзыв</button>
+            <span>* — обязательные поля</span>
+          </div>
         </form>
       </section>
     </main>

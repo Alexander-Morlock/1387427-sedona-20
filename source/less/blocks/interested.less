@@ -1,7 +1,5 @@
 .interested {
   text-align: center;
-  padding-left: @page-mobile-padding;
-  padding-right: @page-mobile-padding;
 
   h2 {
     font-weight: bold;
@@ -17,5 +15,12 @@
 
   p {
     color: @color-subheading;
+    margin: auto 20px;
+
+    @media (min-width: 515px) {
+      width: 435px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

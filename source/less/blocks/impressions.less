@@ -1,0 +1,50 @@
+.impressions {
+  @media (min-width: @tablet-width) {
+    legend {
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: @page-tablet-padding;
+  }
+}
+
+.impressions__radio-input {
+  position: absolute;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  appearance: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    transform: translate(-70px, -13px);
+    width: 48px;
+    height: 48px;
+    background-color: @color-input-placeholder;
+    border-radius: 50%;
+    border-color: @color-input-placeholder;
+    border: 15px solid @color-input-placeholder;
+  }
+
+  &:checked::before {
+    content: "";
+    background-color: @color-black;
+  }
+
+  &:focus::before {
+    outline: 2px solid @color-blue;
+  }
+}

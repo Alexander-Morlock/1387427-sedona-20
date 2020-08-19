@@ -1,17 +1,20 @@
+.hotel-search {
+  margin: auto -1 * @page-mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    margin: auto -1 * @page-tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto -1 * @page-desktop-padding;
+  }
+}
+
 .hotel-search__button {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: @color-white;
   width: 280px;
   height: 58px;
-  background-color: @color-blue;
-  border: none;
-  display: block;
   margin: 0 auto;
+  margin-top: 20px;
 
   &:hover {
     background-color: @color-blue-hover;
@@ -28,7 +31,7 @@
 }
 
 .hotel-search__live-map {
-  margin-top: 49px;
-  width: 100%;
   height: 350px;
+  margin-top: 49px;
+  margin-bottom: 30px;
 }

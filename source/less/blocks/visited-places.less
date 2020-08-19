@@ -1,3 +1,102 @@
 .visited-places {
-  background-color: transparent;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    legend {
+      width: 510px;
+      text-align: center;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 23%;
+        top: 23px;
+        background-color: @color-list-divide;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+
+
+  legend {
+    width: 310px;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 510px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
+  li {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: @page-tablet-padding;
+
+    @media (min-width: @tablet-width) {
+      width: 50%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 25%;
+    }
+  }
+}
+
+.visited-places__check-input {
+  position: absolute;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  appearance: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    transform: translate(-70px, -13px);
+    width: 46px;
+    height: 46px;
+    background-color: @color-input-placeholder;
+    border: 5px solid @color-input-placeholder;
+  }
+
+  &:checked::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:focus::before {
+    outline: 2px solid @color-blue;
+  }
 }

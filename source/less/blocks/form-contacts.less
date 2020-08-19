@@ -1,0 +1,29 @@
+.form-contacts {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    legend {
+      width: 510px;
+      text-align: center;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 23%;
+        top: 13px;
+        background-color: @color-list-divide;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}

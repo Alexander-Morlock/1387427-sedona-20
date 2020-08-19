@@ -15,15 +15,15 @@
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
 
   @media (min-width: @tablet-width) {
-    margin-left: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: @page-tablet-padding;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 105px;
+    padding-left: @page-desktop-padding;
   }
 }
 
@@ -38,10 +38,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 60px;
+    margin-right: @page-tablet-padding;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 120px;
+    margin-right: @page-desktop-padding;
   }
 }

@@ -1,4 +1,28 @@
+.main {
+  padding-right: @page-mobile-padding;
+  padding-left: @page-mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    padding-right: @page-tablet-padding;
+    padding-left: @page-tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: @page-desktop-padding;
+    padding-left: @page-desktop-padding;
+  }
+}
+
 .main__top-banner {
   position: relative;
   top: -35px;
+  margin: auto -1 * @page-mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    margin: auto -1 * @page-tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto -1 * @page-desktop-padding;
+  }
 }
