@@ -31,6 +31,16 @@
     &::placeholder {
       // opacity: 1; // Из макета не понятно сам placeholder какого цвета
     }
+
+    &:hover {
+      background-color: @color-buttone-disabled;
+    }
+
+    &:focus {
+      background-color: @color-white;
+      border: 4px solid @color-buttone-disabled;
+      padding-left: 18px;
+    }
   }
 }
 

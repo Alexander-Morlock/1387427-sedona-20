@@ -33,18 +33,27 @@
     transform: translate(-70px, -13px);
     width: 48px;
     height: 48px;
-    background-color: @color-input-placeholder;
     border-radius: 50%;
-    border-color: @color-input-placeholder;
     border: 15px solid @color-input-placeholder;
+    background-color: @color-input-placeholder;
+  }
+
+  &:hover::before {
+    border-color: @color-buttone-disabled;
+    background-color: @color-buttone-disabled;
   }
 
   &:checked::before {
     content: "";
-    background-color: @color-black;
+    background-color: @color-subheading;
   }
 
   &:focus::before {
     outline: 2px solid @color-blue;
+  }
+
+  &:active::before {
+    border-color: @color-radio-active;
+    background-color: @color-radio-center-active;
   }
 }

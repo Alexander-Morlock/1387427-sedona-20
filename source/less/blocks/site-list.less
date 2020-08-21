@@ -30,11 +30,29 @@
   margin-bottom: 1px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
+  &:hover {
+    background-color: @color-blue-hover;
+  }
+
+  &:active {
+    background-color: @color-blue-active;
+    opacity: @color-opacity-active;
+  }
+
   &:last-child {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0.2) 100%);
 
     @media (min-width: @tablet-width) {
       background: none;
+    }
+
+    &:hover {
+      background-color: @color-blue-hover;
+    }
+
+    &:active {
+      background-color: @color-blue-active;
+      opacity: @color-opacity-active;
     }
   }
 
@@ -54,6 +72,7 @@
   }
 
   @media (min-width: @tablet-width) {
+
     a,
     a:visited {
       color: @color-black;
