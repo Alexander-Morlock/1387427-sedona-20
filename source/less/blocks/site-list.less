@@ -30,13 +30,15 @@
   margin-bottom: 1px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
-  &:hover {
-    background-color: @color-blue-hover;
-  }
+  @media (max-width: @tablet-width - 1) {
+    &:hover {
+      background-color: @color-blue-hover;
+    }
 
-  &:active {
-    background-color: @color-blue-active;
-    opacity: @color-opacity-active;
+    &:active {
+      background-color: @color-blue-active;
+      opacity: @color-opacity-active;
+    }
   }
 
   &:last-child {
@@ -46,13 +48,15 @@
       background: none;
     }
 
-    &:hover {
-      background-color: @color-blue-hover;
-    }
+    @media (max-width: @tablet-width - 1) {
+      &:hover {
+        background-color: @color-blue-hover;
+      }
 
-    &:active {
-      background-color: @color-blue-active;
-      opacity: @color-opacity-active;
+      &:active {
+        background-color: @color-blue-active;
+        opacity: @color-opacity-active;
+      }
     }
   }
 
