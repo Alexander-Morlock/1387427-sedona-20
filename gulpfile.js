@@ -23,8 +23,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-	.pipe(csso())
-	.pipe(rename("styles.min.css"))
+    .pipe(csso())
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -59,67 +59,74 @@ const watcher = () => {
 // Gulp WebP
 
 gulp.task('webp', () =>
-    gulp.src('source/img/**/*.{png,jpg}')
-        .pipe(webp())
-        .pipe(gulp.dest("source/img"))
+  gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(webp())
+    .pipe(gulp.dest("source/img"))
 );
 
 // Images optimization
 
 const images = () => {
-return gulp.src("source/img/**/*.{jpg,png,svg}")
-.pipe(imagemin([
-imagemin.optipng({optimizationLevel: 3}),
-imagemin.mozjpeg({progressive: true}),
-imagemin.svgo()
-]))
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.svgo()
+    ]))
 }
 exports.images = images;
 
 // SVG Sprite
 
 const sprite = () => {
-return gulp.src("source/img/**/icon-*.svg")
-.pipe(svgstore())
-.pipe(rename("sprite.svg"))
-.pipe(gulp.dest("build/img"))
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
 }
 exports.sprite = sprite;
 
 // Production
 
 const copy = () => {
-return gulp.src([
-"source/fonts/**/*.{woff,woff2}",
-"source/img/**",
-"source/js/**",
-"source/*.ico"
-], {
-base: "source"
-})
-.pipe(gulp.dest("build"));
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
 };
 exports.copy = copy;
 
 // Clean «Build» folder
 
 const clean = () => {
-return del("build");
+  return del("build");
 };
 exports.clean = clean;
 
-// Default
-exports.default = gulp.series(
-  styles, server, watcher, sprite
-);
+const html = () => {
+  return gulp.src("./source/*.html")
+    .pipe(gulp.dest("build"));
+}
 
 // Build
 
-const build = () => gulp.series(
-"clean",
-"copy",
-"css",
-"sprite",
-"html"
+const build = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite,
+  html
 );
 exports.build = build;
+
+// Default
+exports.default = gulp.series(
+  build,
+  server,
+  watcher,
+);
