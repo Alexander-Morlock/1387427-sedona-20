@@ -26,6 +26,10 @@
   &:nth-child(2) {
     margin-left: 6px;
     margin-right: 6px;
+
+    svg {
+      margin-top: 5px;
+    }
   }
 
   a {
@@ -34,10 +38,21 @@
 
   svg {
     fill: @color-white;
-    margin-top: 5px;
 
     &:active {
       opacity: @color-opacity-active;
+    }
+  }
+
+  &:nth-child(1) {
+    svg {
+      margin-top: 6px;
+    }
+  }
+
+  &:nth-child(3) {
+    svg {
+      margin-top: 8px;
     }
   }
 }

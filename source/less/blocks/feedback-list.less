@@ -7,12 +7,25 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin-left: -2px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -29px;
+    margin-top: 49px;
+  }
+
+  &:nth-child(3) {
+    label {
+      margin-right: 1px;
+    }
+  }
 
   label {
     font-size: 14px;
     line-height: 26px;
     color: @color-subheading;
-    margin-top: 12px;
+    margin-top: 4px;
+    margin-left: 1px;
   }
 
   input {
@@ -23,13 +36,15 @@
     height: 58px;
     border: 0;
     background-color: @color-input-placeholder;
-    padding-top: 15px;
-    padding-left: 22px;
-    margin-left: 12px;
-    width: 100px; // Без этого минимальная ширина инпутов вылазит за 320px
+    padding: 0;
+    padding-top: 7px;
+    padding-left: 23px;
+    margin-left: 13px;
+    width: 100px;
 
     &::placeholder {
-      // opacity: 1; // Из макета не понятно сам placeholder какого цвета
+      font-family: PT Sans;
+      color: @color-black;
     }
 
     &:hover {
@@ -55,21 +70,68 @@
   flex-wrap: wrap;
   margin: 0;
 
+  &:nth-child(2) {
+    label {
+      margin-top: 14px;
+      margin-bottom: 6px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 25px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 150px;
+        margin-top: 9px;
+        margin-left: -8px;
+        margin-right: 14px;
+      }
+    }
+
+    input {
+      @media (min-width: @desktop-width) {
+        width: calc(100% - 214px);
+      }
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    width: 48%;
+    width: 49.3%;
   }
 
   label {
     width: 100%;
+    margin-left: 19px;
+    margin-top: 0;
+    margin-bottom: 8px;
 
-    @media (min-width: @desktop-width) {
-      width: 40%;
+    @media (min-width: @tablet-width) {
+      margin-left: 23px;
     }
 
-    margin-top: 0;
+    @media (min-width: @desktop-width) {
+      width: 85px;
+      margin-left: -3px;
+      margin-top: 12px;
+    }
   }
 
   input {
-    margin-left: 0;
+
+    margin-left: -3px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 259px;
+      flex-grow: 0;
+    }
+  }
+}
+
+.feedback-list__br--hide-when-desktop {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

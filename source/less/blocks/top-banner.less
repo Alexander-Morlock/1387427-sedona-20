@@ -3,8 +3,8 @@
   background-image: url("../img/text-sedona.svg"),
     url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
-  background-position: center top 50px, center bottom -1px, bottom;
-  background-size: 229px, auto, auto;
+  background-position: center top 52px, center bottom, left -226px bottom;
+  background-size: 231px, auto, 768px;
   background-repeat: no-repeat, no-repeat, no-repeat;
 
   @media (min-resolution: 1.5dppx) {
@@ -13,13 +13,17 @@
       url("../img/bg-back-mobile@2x.jpg");
   }
 
+  @media (min-width: @mobile-width + 1) {
+    background-position: center top 52px, center bottom, center bottom;
+  }
+
   @media (min-width: @tablet-width) {
     height: 290px;
     background-image: url("../img/text-sedona.svg"),
       url("../img/bg-intro-triangle-desktop.svg"),
       url("../img/bg-back-desktop@1x.jpg");
-    background-size: 461px, auto, cover;
-    background-position: center top 96px, center bottom -1px, bottom;
+    background-size: 459px, auto, cover;
+    background-position: center top 94px, center bottom, bottom;
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/text-sedona.svg"),
@@ -29,9 +33,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    height: 301px;
     background-image: url("../img/text-sedona.svg"),
       url("../img/bg-intro-triangle-desktop.svg"),
       url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top 101px, center bottom, bottom;
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/text-sedona.svg"),
@@ -46,7 +52,7 @@
   background-image: url("../img/text-sedona-index.svg"),
     url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
-  background-position: center top 92px, center bottom, center;
+  background-position: center top 90px, center bottom, center;
   background-size: 280px, auto, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
 
@@ -75,7 +81,7 @@
     background-image: url("../img/text-sedona-index.svg"),
       url("../img/bg-intro-triangle-desktop.svg"),
       url("../img/bg-back-desktop@1x.jpg");
-    background-position: center top 80px, center bottom -2px, center bottom -2px;
+    background-position: center top 78px, center bottom, center bottom;
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/text-sedona-index.svg"),

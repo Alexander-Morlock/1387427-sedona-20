@@ -13,8 +13,8 @@
         display: block;
         position: absolute;
         height: 1px;
-        width: 23%;
-        top: 10px;
+        width: 19%;
+        top: 34px;
         background-color: @color-list-divide;
       }
 
@@ -27,13 +27,24 @@
 
 .describe-emotions__textarea {
   display: block;
-  width: 100%;
+  width: 99%;
   min-height: 160px;
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   background-color: @color-input-placeholder;
-  padding: 13px 23px 29px 21px;
+  padding: 12px 23px 29px 18px;
   border: none;
+  margin-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 18px 23px 29px 21px;
+    margin-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 23px 29px 19px;
+  }
 }

@@ -14,9 +14,9 @@
         display: block;
         position: absolute;
         height: 1px;
-        width: 290px;
+        width: 320px;
         background-color: @color-buttone-disabled;
-        top: -16px;
+        top: 4px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -27,9 +27,15 @@
 .feedback__icon {
   width: 58px;
   height: 58px;
+  position: relative;
+  left: -2px;
   background-color: @color-icon-bg;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
 }
 
 .feedback__icon--phone {
@@ -38,4 +44,78 @@
 
 .feedback__icon--mail {
   background-image: url("../img/icon-mail.svg");
+}
+
+.feedback__main-heading {
+  margin-top: -13px;
+}
+
+.feedback__impressions {
+  @media (max-width: @tablet-width - 1) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 3px;
+  }
+}
+
+.feedback__visited-places {
+  margin-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 13px;
+  }
+
+  legend::before {
+    top: 9px;
+  }
+}
+
+.feedback__describe-emotions {
+  margin-top: -19px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -22px;
+  }
+}
+
+.feedback__feedback-form {
+  @media (min-width: @tablet-width) {
+    margin-top: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 34px;
+  }
+}
+
+.feedback__form-contacts {
+  order: 3;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 61px;
+  }
+}
+
+.feedback__form-name {
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    width: 40.6%;
+    margin-left: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 41.5%;
+  }
 }

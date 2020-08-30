@@ -12,9 +12,13 @@
         display: block;
         position: absolute;
         height: 1px;
-        width: 23%;
-        top: 13px;
+        width: 19%;
+        top: 34px;
         background-color: @color-list-divide;
+
+        @media (min-width: @desktop-width) {
+          width: 280px;
+        }
       }
 
       &::before {
@@ -24,6 +28,12 @@
       &::after {
         right: 0;
       }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    legend {
+      margin-bottom: 57px;
     }
   }
 }

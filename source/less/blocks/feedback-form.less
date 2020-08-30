@@ -6,10 +6,16 @@
     height: 292px;
     background-color: @color-list-divide;
     order: 1;
-    margin-right: 20px;
+    margin-right: calc(5% - 10px);
+    position: relative;
+    top: 27px;
 
     @media (max-width: @tablet-width - 1) {
       display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 21px;
     }
   }
 
@@ -17,10 +23,11 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
+    padding-top: 25px;
   }
 
   @media (min-width: @tablet-width) {
@@ -31,29 +38,13 @@
     legend {
       font-size: 21px;
       line-height: 26px;
+      margin-bottom: 5px;
+      margin-left: 0;
     }
 
     .feedback__impressions {
       order: 1;
       width: 43%;
-
-      li {
-        margin-bottom: 60px;
-      }
-    }
-
-    .feedback__form-name {
-      order: 2;
-      width: 43%;
-
-      legend {
-        margin-left: 0;
-      }
-    }
-
-    .feedback__form-contacts {
-      order: 3;
-      width: 100%;
     }
 
     .visited-places {

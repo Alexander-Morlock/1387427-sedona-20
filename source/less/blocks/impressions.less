@@ -1,7 +1,15 @@
 .impressions {
   @media (min-width: @tablet-width) {
+    min-width: 280px;
+
     legend {
       margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    legend {
+      margin-left: 77px;
     }
   }
 
@@ -15,27 +23,41 @@
   }
 
   li {
-    margin-bottom: 30px;
+    margin-bottom: 43px;
     position: relative;
-    padding-left: @page-tablet-padding;
+    padding-left: 76px;
+    top: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: -5px;
+      margin-top: 57px;
+      margin-left: -1px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+    }
   }
 }
 
 .impressions__radio-input {
   position: absolute;
-  border: none; // for Safari
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
+  border: none;
   appearance: none;
 
   &::before {
     content: "";
     position: absolute;
-    transform: translate(-70px, -13px);
-    width: 48px;
-    height: 48px;
+    transform: translate(-83px, -18px);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-80px, -18px);
+    }
+
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 15px solid @color-input-placeholder;
+    border: 17px solid @color-input-placeholder;
     background-color: @color-input-placeholder;
   }
 
