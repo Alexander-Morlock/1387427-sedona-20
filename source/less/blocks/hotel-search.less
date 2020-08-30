@@ -1,8 +1,25 @@
 .hotel-search {
   margin: auto -1 * @page-mobile-padding;
 
+  h2 {
+    margin-bottom: 21px;
+  }
+
+  p {
+    line-height: 24px;
+    margin-bottom: 27px;
+  }
+
   @media (min-width: @tablet-width) {
     margin: auto -1 * @page-tablet-padding;
+
+    h2 {
+      margin-bottom: 33px;
+    }
+
+    p {
+      margin-bottom: 38px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -15,6 +32,14 @@
   height: 58px;
   margin: 0 auto;
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+  }
 
   &:hover {
     background-color: @color-blue-hover;
@@ -33,5 +58,14 @@
 .hotel-search__live-map {
   height: 350px;
   margin-top: 49px;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 59px;
+    margin-bottom: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 66px;
+  }
 }
