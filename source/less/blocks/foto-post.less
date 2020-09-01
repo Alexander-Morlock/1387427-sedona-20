@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+
+    figure {
+      margin: 22px 0 -22px;
+    }
   }
 
   li {
@@ -12,57 +16,124 @@
 }
 
 .foto-post__item {
-  figure {
-    margin: 0;
+  svg {
+    position: absolute;
+    top: 60px;
+    opacity: @color-opacity-active;
 
-    img {
-      height: auto;
+    @media (min-width: @tablet-width) {
+      right: 61px;
+      top: 28px;
     }
 
-    figcaption {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 24px;
+    @media (min-width: @desktop-width) {
+      opacity: 1;
+      fill: @color-white;
+      right: 62px;
+    }
+  }
 
-      @media (min-width: @tablet-width) {
-        background-color: @color-input-placeholder;
-        height: 80px;
-        padding-top: 22px;
-        display: flex;
-        justify-content: space-between;
-        margin-top: -5px;
+  &:nth-child(2n) {
+    span {
+      margin-right: 29px;
+    }
+  }
 
-        h3 {
-          margin-top: -4px;
-        }
+  &:nth-child(2n+1) {
+    span {
+      margin-right: 36px;
+    }
+  }
 
-        span {
-          margin-right: 20px;
-        }
+  &:nth-child(1) {
+    span {
+      margin-right: 20px;
+    }
+  }
 
-        div {
-          margin-left: 20px;
+  h3 {
+    font-size: 14px;
+    margin-bottom: 21px;
+  }
+
+  figure {
+    margin: 22px 0 -14px;
+
+    @media (min-width: @tablet-width) {
+      margin: 22px 0 -22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 8px 0 -14px;
+      position: relative;
+
+      picture {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 80px;
+          width: 100%;
+          background-color: @color-black;
+          opacity: @color-opacity-active;
+          top: -66px;
         }
       }
     }
+  }
+}
 
-    p {
-      text-transform: none;
-      font-size: 14px;
-      line-height: 24px;
-      font-weight: normal;
-      color: @color-subheading;
-      margin-top: -20px;
+.foto-post__fig-caption {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -10px;
+
+  p {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: @color-subheading;
+    margin-top: -20px;
+    margin-bottom: 13px;
+  }
+
+  span {
+    margin-left: 37px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-input-placeholder;
+    height: 80px;
+    padding-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -6px;
+
+    h3 {
+      margin-top: -4px;
     }
 
-    span::before {
-      content: "";
-      display: inline-block;
-      width: 23px;
-      height: 21px;
-      background-image: url("../img/icon-like.svg");
-      background-repeat: no-repeat;
-      margin-right: 10px;
+    div {
+      margin-left: 20px;
+      margin-top: -10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -86px;
+    position: absolute;
+    background: transparent;
+    color: @color-white;
+    opacity: 1;
+    width: 100%;
+
+    p {
+      color: @color-white;
     }
   }
 }

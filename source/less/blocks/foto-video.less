@@ -10,20 +10,14 @@
   @media (max-width: @tablet-width - 1) {
     width: 280px;
 
-    article::before,
-    article::after {
+    article::before {
       content: "";
       display: block;
       height: 1px;
       background-color: @color-buttone-disabled;
-    }
-
-    article::before {
-      margin-bottom: 20px;
-    }
-
-    article::after {
-      margin-top: 20px;
+      margin-top: 30px;
+      width: 320px;
+      margin-left: -1 * @page-mobile-padding;
     }
 
     li {
@@ -35,6 +29,7 @@
 
   @media (min-width: @tablet-width) {
     width: 648px;
+    margin-top: 56px;
 
     li {
       width: 50%;
@@ -47,6 +42,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+    margin-top: 72px;
 
     li {
       width: 400px;
@@ -55,5 +51,17 @@
         width: 1200px;
       }
     }
+  }
+}
+
+.foto-video__video-post {
+  margin-top: 63px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
   }
 }
