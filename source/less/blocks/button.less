@@ -10,3 +10,40 @@
   text-transform: uppercase;
   display: block;
 }
+
+.button__failure-pop-up-ok,
+.button__success-pop-up-ok {
+  position: absolute;
+  margin: 0 auto;
+  font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.button__failure-pop-up-ok {
+  bottom: 36px;
+  width: 180px;
+  height: 58px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 50px;
+    width: 272px;
+    height: 58px;
+  }
+}
+
+.button__success-pop-up-ok {
+  bottom: 20px;
+  width: 280px;
+  height: 58px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 44px;
+    width: 458px;
+    height: 58px;
+  }
+}

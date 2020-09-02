@@ -79,7 +79,8 @@
 
             <ul class="feedback-list feedback-list--contacts">
               <li class="feedback-list__item feedback-list__item--contacts">
-                <label for="input-tel"><span class="feedback-list__br--hide-when-desktop">Контактный </span>телефон*:</label>
+                <label for="input-tel"><span class="feedback-list__br--hide-when-desktop">Контактный
+                  </span>телефон*:</label>
                 <input type="tel" placeholder="Введите телефон" id="input-tel" required>
                 <div class="feedback__icon feedback__icon--phone"></div>
               </li>
@@ -153,6 +154,23 @@
             <button class="button submit-and-text__button-submit" type="submit">Отправить отзыв</button>
             <span>* — обязательные поля</span>
           </div>
+
+          <div class="feedback-form__failure-pop-up feedback-form__pop-up-hidden">
+            <div>
+              <h2>Что-то пошло не так!</h2>
+              <p>Проверьте поля, выделенные крaсным, скорее всего вы забыли их заполнить</p>
+              <button class="button button__failure-pop-up-ok" type="button">OK</button>
+            </div>
+          </div>
+
+          <div class="feedback-form__success-pop-up feedback-form__pop-up-hidden">
+            <div>
+              <h2>Ваш отзыв отправлен!</h2>
+              <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
+              <button class="button button__success-pop-up-ok" type="button">Закрыть окно</button>
+            </div>
+          </div>
+
         </form>
       </section>
     </main>
