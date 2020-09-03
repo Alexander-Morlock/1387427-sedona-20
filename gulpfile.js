@@ -6,12 +6,15 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 
-const webp = require("gulp-webp");
+const gulpWebp = require("gulp-webp");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const replace = require('gulp-replace');
+
+const uglify = require('gulp-uglify-es').default;
 
 // Styles
 
@@ -53,16 +56,19 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series(html)).on("change", sync.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("javascript"));
 }
 
 
 // Gulp WebP
 
-gulp.task('webp', () =>
-  gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(webp())
+const webp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulpWebp())
     .pipe(gulp.dest("source/img"))
-);
+};
+
+exports.web = gulpWebp;
 
 // Images optimization
 
@@ -92,7 +98,6 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -110,8 +115,17 @@ exports.clean = clean;
 
 const html = () => {
   return gulp.src("./source/*.html")
+    .pipe(replace('script.js', 'script.min.js'))
     .pipe(gulp.dest("build"));
-}
+};
+
+const javascript = () => {
+  return gulp.src("./source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build"));
+};
+exports.javascript = javascript;
 
 // Build
 
@@ -120,7 +134,8 @@ const build = gulp.series(
   copy,
   styles,
   sprite,
-  html
+  html,
+  javascript
 );
 exports.build = build;
 
