@@ -1,33 +1,23 @@
 .form-contacts {
   @media (min-width: @tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 34px;
+      background-color: @color-list-divide;
+    }
+
     legend {
       position: relative;
       text-align: center;
       display: block;
-      width: 100%;
-
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        height: 1px;
-        width: 19%;
-        top: 34px;
-        background-color: @color-list-divide;
-
-        @media (min-width: @desktop-width) {
-          width: 280px;
-        }
-      }
-
-      &::before {
-        left: 0;
-      }
-
-      &::after {
-        right: 0;
-      }
+      width: 402px;
+      background-color: @color-white;
     }
   }
 

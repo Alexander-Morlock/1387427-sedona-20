@@ -14,8 +14,11 @@
 }
 
 .main__top-banner {
-  position: relative;
-  top: -34px;
+  @media (max-width: @tablet-width - 1) {
+    position: relative;
+    top: 56px;
+  }
+
   margin: auto -1 * @page-mobile-padding;
 
   @media (min-width: @tablet-width) {
@@ -36,22 +39,24 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 77px;
+    margin-top: 56px;
   }
 }
 
 .main__feedback {
+  margin-top: 105px;
+
   @media (min-width: @tablet-width) {
-    margin-top: 41px;
+    margin-top: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 79px;
+    margin-top: 125px;
   }
 }
 
 .main__foto-video {
-  margin-top: -16px;
+  margin-top: -11px;
 
   @media (min-width: @tablet-width) {
     margin-top: 42px;

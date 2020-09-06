@@ -1,8 +1,16 @@
 .social-links-list {
   list-style: none;
   padding: 0;
-  margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 450px;
+  }
 }
 
 .social-links-list__item {
@@ -10,6 +18,10 @@
   height: 48px;
   background-color: @color-blue;
   display: flex;
+
+  a {
+    margin: auto;
+  }
 
   &:hover {
     background-color: @color-blue-hover;
@@ -23,36 +35,11 @@
     background-color: @color-buttone-disabled;
   }
 
-  &:nth-child(2) {
-    margin-left: 6px;
-    margin-right: 6px;
-
-    svg {
-      margin-top: 5px;
-    }
-  }
-
-  a {
-    margin: auto;
-  }
-
   svg {
     fill: @color-white;
 
     &:active {
       opacity: @color-opacity-active;
-    }
-  }
-
-  &:nth-child(1) {
-    svg {
-      margin-top: 6px;
-    }
-  }
-
-  &:nth-child(3) {
-    svg {
-      margin-top: 8px;
     }
   }
 }

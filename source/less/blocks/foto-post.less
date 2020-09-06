@@ -69,17 +69,6 @@
 
       picture {
         position: relative;
-
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          height: 80px;
-          width: 100%;
-          background-color: @color-black;
-          opacity: @color-opacity-active;
-          top: -66px;
-        }
       }
     }
   }
@@ -108,18 +97,19 @@
 
   @media (min-width: @tablet-width) {
     background-color: @color-input-placeholder;
-    height: 80px;
+    min-height: 80px;
     padding-top: 29px;
     display: flex;
     justify-content: space-between;
     margin-top: -6px;
+    bottom: 0;
 
     h3 {
       margin-top: -4px;
     }
 
     div {
-      margin-left: 20px;
+      margin-left: 21px;
       margin-top: -10px;
     }
   }
@@ -127,10 +117,10 @@
   @media (min-width: @desktop-width) {
     margin-top: -86px;
     position: absolute;
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0.3);
     color: @color-white;
-    opacity: 1;
     width: 100%;
+    bottom: 6px;
 
     p {
       color: @color-white;

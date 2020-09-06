@@ -1,10 +1,17 @@
+const setListener = (element, eventType, handler) => {
+  if (!element) {
+    return;
+  }
+  element.addEventListener(eventType, handler);
+}
+
 var mainNav = document.querySelector(".site-list");
 mainNav.classList.toggle("main-nav-mobile-hide");
 
 var navButton = document.querySelector(".main-nav-toggle");
 navButton.classList.toggle("main-nav-mobile-hide");
 
-navButton.addEventListener("click", function () {
+setListener(navButton, "click", function () {
   mainNav.classList.toggle("main-nav-mobile-hide");
   mainNav.classList.toggle("main-nav--show");
   navButton.classList.toggle("main-nav-toggle--cross");
@@ -21,15 +28,15 @@ var feedbackForm = document.querySelector(".feedback-form");
 var failurePopupButtonOK = document.querySelector(".button__failure-pop-up-ok");
 var successPopupButtonOK = document.querySelector(".button__success-pop-up-ok");
 
-failurePopupButtonOK.addEventListener("click", function () {
+setListener(failurePopupButtonOK, "click", function () {
   failurePopup.classList.add("feedback-form__pop-up-hidden");
 });
 
-successPopupButtonOK.addEventListener("click", function () {
+setListener(successPopupButtonOK, "click", function () {
   successPopup.classList.add("feedback-form__pop-up-hidden");
 });
 
-feedbackForm.addEventListener("submit", function (evt) {
+setListener(feedbackForm, "submit", function (evt) {
   evt.preventDefault();
 
   if (!formInputName.value || !formInputLastName.value || !formInputTelephone.value || !formInputEmail.value) {
