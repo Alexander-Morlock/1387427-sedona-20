@@ -6,15 +6,15 @@ const setListener = (element, eventType, handler) => {
 }
 
 var mainNav = document.querySelector(".site-list");
-mainNav.classList.toggle("main-nav-mobile-hide");
+mainNav.classList.toggle("main-nav__mobile-hide");
 
-var navButton = document.querySelector(".main-nav-toggle");
-navButton.classList.toggle("main-nav-mobile-hide");
+var navButton = document.querySelector(".main-nav__toggle");
+navButton.classList.toggle("main-nav__mobile-hide");
 
 setListener(navButton, "click", function () {
-  mainNav.classList.toggle("main-nav-mobile-hide");
+  mainNav.classList.toggle("main-nav__mobile-hide");
   mainNav.classList.toggle("main-nav--show");
-  navButton.classList.toggle("main-nav-toggle--cross");
+  navButton.classList.toggle("main-nav__toggle--cross");
 });
 
 var formInputName = document.getElementById("input-name");

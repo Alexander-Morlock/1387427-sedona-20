@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  color: @color-subheading;
 
   @media (max-width: @tablet-width - 1) {
     span {
@@ -25,8 +26,22 @@
 .submit-and-text__button-submit {
   margin: 51px auto;
   margin-bottom: 55px;
-  height: 58px;
+  min-height: 58px;
   width: 280px;
+  padding: 15px;
+
+  &:hover {
+    background-color: @color-blue-hover;
+  }
+
+  &:active {
+    background-color: @color-blue-active;
+    color: rgba(255, 255, 255, @color-opacity-active);
+  }
+
+  &:disabled {
+    background-color: @color-buttone-disabled;
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 1px;

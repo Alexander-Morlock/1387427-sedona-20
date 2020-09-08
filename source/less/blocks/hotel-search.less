@@ -29,9 +29,16 @@
 
 .hotel-search__button {
   width: 280px;
-  height: 58px;
+  min-height: 58px;
   margin: 0 auto;
   margin-top: 20px;
+  display: flex;
+  padding: 15px;
+
+  a {
+    margin: auto;
+    color: @color-white;
+  }
 
   @media (min-width: @tablet-width) {
     width: 458px;
@@ -48,6 +55,10 @@
   &:active {
     background-color: @color-blue-active;
     color: rgba(255, 255, 255, @color-opacity-active);
+
+    a {
+      opacity: @color-opacity-active;
+    }
   }
 
   &:disabled {

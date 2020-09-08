@@ -31,11 +31,10 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img src="img/logo-sedona-mobile.svg" alt="City of Sedona">
+          <img src="img/logo-sedona-mobile.svg" alt="City of Sedona" width="102" height="84">
         </picture>
       </a>
-      <button class="main-nav-toggle main-nav-mobile-hide" type="button" aria-label="Открыть меню"></button>
-
+      <button class="main-nav__toggle main-nav__mobile-hide" type="button" aria-label="Открыть меню"></button>
     </header>
 
     <main class="main">
@@ -92,14 +91,14 @@
           <li class="features-with-icons-wrapper">
             <ul class="features-with-icons features-list__features-with-icons">
               <li class="features-with-icons__item features-with-icons__item--icon-house">
-                <svg>
+                <svg width="39" height="37">
                   <use xlink:href="img/sprite.svg#icon-house"></use>
                 </svg>
                 <h3>Жилье</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="features-with-icons__item features-with-icons__item--icon-gift">
-                <svg>
+                <svg width="32" height="38">
                   <use xlink:href="img/sprite.svg#icon-gift"></use>
                 </svg>
                 <h3>Сувениры</h3>
@@ -107,7 +106,7 @@
                   производства!</p>
               </li>
               <li class="features-with-icons__item features-with-icons__item--icon-burger">
-                <svg>
+                <svg width="40" height="35">
                   <use xlink:href="img/sprite.svg#icon-burger"></use>
                 </svg>
                 <h3>Еда</h3>
@@ -125,12 +124,11 @@
           <p>Укажите предполагаемые даты поездки, <br class="features-list__br-hide-when-mobile">и мы покажем вам
             лучшие предложения гостиниц в седоне</p>
         </div>
-        <button class="button hotel-search__button" type="button">Найти гостиницу</button>
+        <div class="button hotel-search__button"><a href="https://htmlacademy.ru/intensive/adaptive">Найти гостиницу</a></div>
         <iframe class="live-map hotel-search__live-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592425.1299280459!2d-112.0518960350721!3d34.888442169262674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2scz!4v1592751843857!5m2!1sru!2scz">
         </iframe>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -138,21 +136,21 @@
       <ul class="social-links-list footer__social-links-list">
         <li class="social-links-list__item social-links-list__item--twitter">
           <a href="twitter.com" aria-label="Twitter">
-            <svg width="17.5" height="14.663">
+            <svg width="18" height="15">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social-links-list__item social-links-list__item--facebook">
           <a href="facebook.com" aria-label="Facebook">
-            <svg width="8.672" height="18.944">
+            <svg width="9" height="19">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social-links-list__item social-links-list__item--youtube">
           <a href="youtube.com" aria-label="Youtube">
-            <svg width="19.979" height="14.015">
+            <svg width="20" height="14">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
@@ -161,9 +159,8 @@
       <div class="developed-by footer__developed-by">
         <a href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="HtmlAcademy.ru">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
-            enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+            width="27" height="34" viewBox="0 0 27 34" enable-background="new 0 0 27 34" xml:space="preserve">
             <path
               d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
           </svg>

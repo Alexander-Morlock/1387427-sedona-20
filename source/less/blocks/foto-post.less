@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    figure {
+    article {
       margin: 22px 0 -22px;
     }
   }
@@ -16,6 +16,13 @@
 }
 
 .foto-post__item {
+  a {
+    @media (min-width: @tablet-width) {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
   svg {
     position: absolute;
     top: 60px;
@@ -56,7 +63,7 @@
     margin-bottom: 21px;
   }
 
-  figure {
+  article {
     margin: 22px 0 -14px;
 
     @media (min-width: @tablet-width) {
@@ -66,10 +73,6 @@
     @media (min-width: @desktop-width) {
       margin: 8px 0 -14px;
       position: relative;
-
-      picture {
-        position: relative;
-      }
     }
   }
 }

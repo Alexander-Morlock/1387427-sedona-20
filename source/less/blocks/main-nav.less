@@ -1,8 +1,18 @@
-.main-nav-mobile-hide {
+.main-nav {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  position: static;
+  top: auto;
+  width: auto;
+}
+
+.main-nav__mobile-hide {
   display: none;
 }
 
-.main-nav-toggle {
+.main-nav__toggle {
   width: 23px;
   height: 22px;
   background-image: url("../img/icon-menu.svg");
@@ -28,16 +38,14 @@
   }
 }
 
-.main-nav-toggle--cross {
+.main-nav__toggle--cross {
   background-image: url("../img/icon-cross.svg");
 }
 
 .main-nav--show {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
+  margin-bottom: -29px;
 }
 
 .main-nav__site-list {
-  margin-bottom: 29px;
+  margin-bottom: -1px;
 }

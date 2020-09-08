@@ -1,7 +1,16 @@
 .page-header__logo img {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  top: 0;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 96px;
+  }
 }

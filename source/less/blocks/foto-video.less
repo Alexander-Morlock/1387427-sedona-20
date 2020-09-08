@@ -16,6 +16,7 @@
       height: 1px;
       background-color: @color-buttone-disabled;
       margin-top: 30px;
+      margin-bottom: 22px;
       width: 320px;
       margin-left: -1 * @page-mobile-padding;
     }
@@ -55,7 +56,22 @@
 }
 
 .foto-video__video-post {
-  margin-top: 63px;
+  margin: 0 auto;
+
+  @media (max-width: @tablet-width - 1) {
+    width: 280px;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: @color-buttone-disabled;
+      margin-top: 30px;
+      margin-bottom: 32px;
+      width: 320px;
+      margin-left: -1 * @page-mobile-padding;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 79px;
